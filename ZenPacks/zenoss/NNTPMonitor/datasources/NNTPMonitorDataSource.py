@@ -20,6 +20,7 @@ from Products.ZenUtils.ZenTales import talesCompile, getEngine
 class NNTPMonitorDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
     
     NNTP_MONITOR = 'NNTPMonitor'
+    ZENPACKID = 'ZenPacks.zenoss.NNTPMonitor'
     
     sourcetypes = (NNTP_MONITOR,)
     sourcetype = NNTP_MONITOR
