@@ -67,7 +67,7 @@ class NNTPMonitorDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
 
     def getDescription(self):
         if self.sourcetype == self.NNTP_MONITOR:
-            return self.nntpServer + self.port
+            return self.nntpServer + str(self.port)
         return RRDDataSource.RRDDataSource.getDescription(self)
 
 
