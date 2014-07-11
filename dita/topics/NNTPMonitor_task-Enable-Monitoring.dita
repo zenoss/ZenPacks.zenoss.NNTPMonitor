@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d47e66"><title>Enable Monitoring</title><taskbody><context><p>To enable monitoring for a device:</p></context><steps-informal><ol>
+      <li>
+        <p>Select Infrastructure from the navigation bar.</p>
+      </li>
+
+      <li>
+        <p>Click the device name in the device list.</p>
+
+        <p>The device overview page appears.</p>
+      </li>
+
+      <li>
+        <p>Expand Monitoring Templates, and then select Device from the
+        left panel.</p>
+      </li>
+
+      <li>
+        <p>Select Bind Templates from the Action menu.</p>
+
+        <p>The Bind Templates dialog appears.</p>
+      </li>
+
+      <li>
+        <p>Add the NNTPMonitor template to the list of selected templates,
+        and then click <b>Submit</b>.</p>
+
+        <p>The NNTPMonitor template is added to the list of monitoring
+        templates.</p>
+      </li>
+
+      <li>
+        <p>Select the template and change options as needed.</p>
+      </li>
+
+      <li>
+        <p>Validate your configuration by running
+        <cmdname>zencommand</cmdname> and observing that the
+        <cmdname>check_nntp</cmdname> or <cmdname>check_nntps</cmdname>
+        command correctly connects to your NNTP server:</p>
+
+        <codeblock outputclass="screen">zencommand run -v10 -d yourdevicenamehere</codeblock>
+      </li>
+    </ol></steps-informal></taskbody></task>
